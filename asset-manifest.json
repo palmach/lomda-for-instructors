@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3683a947.css",
+    "main.js": "/static/js/main.32efed45.js",
+    "static/js/787.fbd7ba7d.chunk.js": "/static/js/787.fbd7ba7d.chunk.js",
+    "static/media/spirit.png": "/static/media/spirit.fb927fce870c102d7f50.png",
+    "static/media/logo.png": "/static/media/logo.e6b846259b7cb1e092fc.png",
+    "static/media/santa.png": "/static/media/santa.5f1d12c7382ed4761685.png",
+    "static/media/FbSpoiler-Regular.otf": "/static/media/FbSpoiler-Regular.41d6b72d239375d45da5.otf",
+    "static/media/Karantina-Regular.ttf": "/static/media/Karantina-Regular.9844915e3fa387c180fe.ttf",
+    "static/media/Karantina-Bold.ttf": "/static/media/Karantina-Bold.ae4297de9d49b7dd5397.ttf",
+    "static/media/HammerProGX.ttf": "/static/media/HammerProGX.e020bae569a56df109a7.ttf",
+    "index.html": "/index.html",
+    "main.3683a947.css.map": "/static/css/main.3683a947.css.map",
+    "main.32efed45.js.map": "/static/js/main.32efed45.js.map",
+    "787.fbd7ba7d.chunk.js.map": "/static/js/787.fbd7ba7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3683a947.css",
+    "static/js/main.32efed45.js"
+  ]
+}
