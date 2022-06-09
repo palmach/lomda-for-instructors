@@ -1,6 +1,6 @@
 // QuestionsPart
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import "./QuestionsPart.css";
 import { useNavigate } from "react-router-dom";
 import FrueFalseQuestions from "./../../Components/trueFalseQuestions/FrueFalseQuestions";
@@ -15,26 +15,42 @@ import Text from "./../../Text.json";
 function QuestionsPart(props) {
   const [questionNum, setQuestionNum] = useState(0);
   const [questionCaunter, setQuestionCaunter] = useState(1);
+  
   const [rndQuestion, setRndQuestion] = useState([]);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [clickCaunter, setClickCaunter] = useState(0);
   const [isAnswerd, setIsAnswerd] = useState(false);
 
+  const questions = useMemo(() => {
+    setRndQuestion(props.createRndNum(rndQuestion));
+  }, [rndQuestion])
+
+  
+
   const navigate = useNavigate();
+
+  console.log(rndQuestion);
 
   useEffect(() => {
     // if (props.statPage < props.pageNum || props.pageNum === 0) {
     props.resetPage(props.statPage);
     setCurrQuestion(0);
-    // }
+    console.log(rndQuestion);
+    
 
-    if (questionCaunter === 1) {
-      let num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
-      while (rndQuestion[0] !== undefined && rndQuestion[0] === num) {
-        num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
-      }
-      rndQuestion.push(num);
-    }
+    
+    // if (questionCaunter === 1) {
+    //   questions;
+
+    //   // let num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+    //   rndQuestion.push(Math.floor(Math.random() * (5 - 0 + 1)) + 0);
+    //   let num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+    //   while (rndQuestion[0] === num) {
+    //     num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+    //   }
+    //   rndQuestion.push(num);
+    //   console.log(rndQuestion);
+    // }
   }, []);
 
   useEffect(() => {
@@ -62,6 +78,7 @@ function QuestionsPart(props) {
       navigate("/dear-instructors");
     }
   };
+  console.log("currQuestion " +currQuestion);
 
   const handleContainerOnBottom = () => {
     setIsAnswerd(true);

@@ -11,6 +11,17 @@ import PrinciplesPart from "./Container/principlesPart/PrinciplesPart";
 function App() {
   const [pageNum, setPageNum] = useState(0);
 
+  const createRndNum= (rndQuestion)=>{
+    rndQuestion.push(Math.floor(Math.random() * (5 - 0 + 1)) + 0);
+    let num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+    while (rndQuestion[0] === num) {
+      num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+    }
+    rndQuestion.push(num);
+    // console.log(rndQuestion);
+    return (rndQuestion)
+  }
+
   const changePage = () => {
     setPageNum((prev) => prev + 1);
   };
@@ -29,7 +40,7 @@ function App() {
               exact
               path="/questions"
               element={
-                <QuestionsPart changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={2} resetPage={resetPage} />
+                <QuestionsPart createRndNum={createRndNum} changePage={changePage} pageNum={pageNum} setPageNum={setPageNum} statPage={2} resetPage={resetPage} />
               }
             ></Route>
             <Route
