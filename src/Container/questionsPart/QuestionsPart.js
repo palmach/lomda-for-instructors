@@ -36,21 +36,6 @@ function QuestionsPart(props) {
     props.resetPage(props.statPage);
     setCurrQuestion(0);
     console.log(rndQuestion);
-    
-
-    
-    // if (questionCaunter === 1) {
-    //   questions;
-
-    //   // let num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
-    //   rndQuestion.push(Math.floor(Math.random() * (5 - 0 + 1)) + 0);
-    //   let num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
-    //   while (rndQuestion[0] === num) {
-    //     num = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
-    //   }
-    //   rndQuestion.push(num);
-    //   console.log(rndQuestion);
-    // }
   }, []);
 
   useEffect(() => {
@@ -67,7 +52,7 @@ function QuestionsPart(props) {
     setClickCaunter((prev) => prev + 1);
     if (questionCaunter <= 2) {
       if (isAnswerd) {
-        if (questionCaunter >= 2) {
+        if (questionCaunter >= 1) {
           setQuestionCaunter((prev) => prev + 1);
           setCurrQuestion(rndQuestion[questionCaunter - 1]);
         } else {
